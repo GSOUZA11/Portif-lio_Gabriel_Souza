@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portifólio - Gabriel Souza</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+<body>
+    <!--Navegação das paginas-->
+    <header>
+        <nav>
+        <a href="./index.html" class="logo"> Gabriel Souza</a>
+        <button class="menu-toggle" onclick="togglemenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+        </button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="./index.html">Início</a></li>
+            <li><a href="./apresentação.html">Apresentação</a></li>
+            <li><a href="./projetos.html">Projetos</a></li>
+            <li><a href="./contato.html">Contato</a></li>
+            <li><a href="./privacidade.html">Privacidade</a></li>
+        </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1> Meus Projetos</h1>
+                <p>Uma coleção dos projetos que desenvolvi, demonstrando minhas habilidades e evolução profissional</p>
+            </div>
+        </section>
+
+        <section class="filters">
+            <div class="container">
+                <h3> Filtrar por categoria:</h3>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" onclick="filterProjects('todos')">Todos</button>
+                    <button class="filter-btn" onclick="filterProjects('web')">Web Design</button>
+                    <button class="filter-btn" onclick="filterProjects('frontend')">Front-End</button>
+                    <button class="filter-btn" onclick="filterProjects('pessoal')">Pessoal</button>
+                </div>
+            </div>
+        </section>
+
+       <section class="stats-section" >
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number">15+</span>
+                    <span class="stat-label">Projetos Concluídos</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">3</span>
+                    <span class="stat-label">Anos de Experiência</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">9</span>
+                    <span class="stat-label">Tecnologias Dominadas</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Projetos Responsivos</span>
+                </div>
+            </div>
+        </div>
+       </section>
+
+
+       <!--Grid de Projetos-->
+       <section class="projects-section">
+        <div class="container">
+            <div class="projects-grid">
+                <!-- Projeto 1 -->
+                <div class="project-card" data-category="web frontend">
+                    <div class="project-image">🐶🐱</div>
+                    <div class="project-content">
+                        <span class="project-category">Web Design</span>
+                        <h3 class="project-title">Site Pet Shop Veterinário</h3>
+                        <p class="project-description">
+                            Sabemos o quanto seu pet é especial para voce. Mais do que um animal de estimação, ele é um membro da familia que enche sua vida de alegria e amor incondicional.<br><br>
+
+                            Nossa missão é zelar pela saúde, segurança e felicidade do seu companheiro, oferecendo serviços de alta qualidade e um ambiente acolhedor, onde ele se sinta amado e respeitado.
+                        </p>
+                        <div class="project-tech">
+                            
+                            <span class="tech-tag">TailwindCSS</span>
+                            <span class="tech-tag">NextJS</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">Vercel</span>
+                            <span class="tech-tag">Responsivo</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://pet-shop-veterinario-w25j.vercel.app/" class="project-link btn-primary">Ver Demo</a>
+                            <a href="https://github.com/GSOUZA11/Pet_Shop_Veterinario" class="project-link btn-secondary">Código</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto 7 -->
+                <div class="project-card" data-category="web pessoal">
+                    <div class="project-image">🌈🩺🩸</div>
+                    <div class="project-content">
+                        <span class="project-category">Pessoal</span>
+                        <h3 class="project-title">Site Lacrei Saúde</h3>
+                        <p class="project-description">
+                            Conectamos pessoas LGBTQIAPN+ com profissionais de saúde qualificados, proporcionando experiências de cuidado seguras e inclusivas.<br><br>
+                            Acreditamos que, ao possibilitar a inclusão clínica da nossa comunidade, transformamos o mundo...
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Vercel</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://desafio-lacrei-sa-de.vercel.app/" class="project-link btn-primary">Ver Demo</a>
+                            <a href="https://github.com/GSOUZA11/Desafio-Lacrei-Sa-de" class="project-link btn-secondary">Código</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto 8 -->
+                <div class="project-card" data-category="frontend web">
+                    <div class="project-image">🌍✈️</div>
+                    <div class="project-content">
+                        <span class="project-category">Front-End</span>
+                        <h3 class="project-title">Site Travelgram</h3>
+                        <p class="project-description">
+                            Amante de viagens, cultura e gastronomia. 
+                            Aqui compartilho as histórias registradas em cada clique, explorando cantinhos fascinantes do nosso planeta a partir da movimentada cidade de São Paulo.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">Vercel</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://travelgram-sable.vercel.app/" class="project-link btn-primary">Ver Demo</a>
+                            <a href="http://github.com/GSOUZA11/Travelgram" class="project-link btn-secondary">Código</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto 9 -->
+                <div class="project-card" data-category="ui-ux web">
+                    <div class="project-image">👨‍⚕️💉🩸</div>
+                    <div class="project-content">
+                        <span class="project-category">UI/UX</span>
+                        <h3 class="project-title">App Glicare Controle da diabetes</h3>
+                        <p class="project-description">
+                            O Glicare foi feito para facilitar seu cuidado com o diabetes, trazendo praticidade e controle para sua rotina.<br><br> Se alimente nos horários certos, registre o histórico da sua glicemia e configure lembretes para medir a glicose.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">TailwindCSS</span>
+                            <span class="tech-tag">NextJS</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">Vercel</span>
+                            <span class="tech-tag">Responsivo</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://www.glicareapp.com.br/" class="project-link btn-primary">Ver Demo</a>
+                            <a href="https://github.com/Glicare-Pipoca-Agil/Glicare" class="project-link btn-secondary">Código</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+
+
+<script>
+    // Função para toggle do menu mobile
+    function toggleMenu() {
+        const navLinks = document.getElementById('navLinks');
+        navLinks.classList.toggle('active');
+    }
+
+    // Função para filtrar projetos
+    function filterProjects(category) {
+        const projects = document.querySelectorAll('.project-card');
+        const buttons = document.querySelectorAll('.filter-btn');
+        
+        // Remove classe active de todos os botões
+        buttons.forEach(btn => btn.classList.remove('active'));
+        
+        // Adiciona classe active ao botão clicado
+        event.target.classList.add('active');
+        
+        // Filtra os projetos
+        projects.forEach(project => {
+            if (category === 'todos') {
+                project.classList.remove('hidden');
+            } else {
+                const projectCategories = project.getAttribute('data-category');
+                if (projectCategories.includes(category)) {
+                    project.classList.remove('hidden');
+                } else {
+                    project.classList.add('hidden');
+                }
+            }
+        });
+    }
+
+    // Fecha o menu mobile ao clicar em um link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            document.getElementById('navLinks').classList.remove('active');
+        });
+    });
+
+    // Fecha o menu mobile ao redimensionar a tela
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 768) {
+            document.getElementById('navLinks').classList.remove('active');
+        }
+    });
+
+    // Animação de entrada dos cards
+    window.addEventListener('load', () => {
+        const cards = document.querySelectorAll('.project-card');
+        cards.forEach((card, index) => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            
+            setTimeout(() => {
+                card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0)';
+            }, index * 100);
+        });
+    });
+</script>
+</body>
+</html>
+                </div>
+
+                <!-- Projeto 2 -->
+                <div class="project-card" data-category="frontend">
+                    <div class="project-image">📱</div>
+                    <div class="project-content">
+                        <span class="project-category">Front-End</span>
+                        <h3 class="project-title">Tela de Login</h3>
+                        <p class="project-description">
+                            Tela de login personalizada para a pagina, possui acesso com email, senha, lembrar de mim, esqueceu a senha, ou registrar uma nova conta. 
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Vercel</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="http://tela-login-one-bice.vercel.app/" class="project-link btn-primary">Ver Demo</a>
+                            <a href="https://github.com/GSOUZA11/Tela_Login" class="project-link btn-secondary">Código</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto 3 -->
+                <div class="project-card" data-category="ui-ux web">
+                    <div class="project-image">🍓🍒🥭</div>
+                    <div class="project-content">
+                        <span class="project-category">UI/UX</span>
+                        <h3 class="project-title">Site Fruta & Fruto</h3>
+                        <p class="project-description">
+                            Nossas receitas ajudam você a aproveitar melhor os alimentos, economizar, ganhar tempo e praticidade.<br><br>
+                            Uma alimentação consciente traz um poder sutil que energiza o corpo e a alma é essa escolha começa na mente. Nutrição equilibrada é a chave para uma vida plena e equilibrada.<br>
+                            Comer é fundamental, nutrir-se é um ato de amor próprio.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/GSOUZA11/Receitas-saud-veis-?tab=readme-ov-file" class="project-link btn-primary">Ver Demo</a>
+                            <a href="https://github.com/GSOUZA11/Receitas-saud-veis-/blob/main/fruta%20%26%20fruto.html" class="project-link btn-secondary">Ver Código</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto 4 -->
+                <div class="project-card" data-category="frontend web">
+                    <div class="project-image">☕</div>
+                    <div class="project-content">
+                        <span class="project-category">Front-End</span>
+                        <h3 class="project-title">Landing Page Coffee Shop</h3>
+                        <p class="project-description">
+                            Landing page moderna para cafeteria local com animações suaves, 
+                            galeria de produtos e integração com redes sociais.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                          
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/GSOUZA11/Cafena-Site" class="project-link btn-primary">Ver Demo</a>
+                            <a href="https://github.com/GSOUZA11/Cafena-Site/blob/main/index.cafeteria.html" class="project-link btn-secondary">Código</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto 5 -->
+                <div class="project-card" data-category="pessoal frontend">
+                    <div class="project-image">🎵</div>
+                    <div class="project-content">
+                        <span class="project-category">Pessoal</span>
+                        <h3 class="project-title">Player Spotify Personalizado</h3>
+                        <p class="project-description">
+                            Streaming de áudio Spotify desenvolvido como projeto pessoal, com interface minimalista 
+                            e funcionalidades avançadas de playlist e equalização.<br><br> 
+                            Oferece acesso a milhões de músicas, podcasts e audiolivros de criadores do mundo todo.
+                             
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">ReactJS</span>
+                            <span class="tech-tag">Vercel</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://spotify-react-taupe-pi.vercel.app/" class="project-link btn-primary">Ver Demo</a>
+                            <a href="https://github.com/GSOUZA11/spotify-react" class="project-link btn-secondary">Código</a>
+                        </div>
+                    </div>
+                </div>
+
+    </main>
+
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <nav>
+            <ul style="text-align: center; list-style: none; display: flex; justify-content:space-between; padding: 0; margin: 0;">
+                <li style="padding: 15px;"><a href="https://www.facebook.com/11980994351biel/">
+                     <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" width="32px" height="32px" ></a></li>
+                <li style="padding: 15px;"><a href="https://github.com/GSOUZA11"> 
+                    <img src="img/github.png" alt="github" width="32px" height="32px"></a></li>
+                <li style="padding: 15px;"><a href="https://www.instagram.com"> 
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram" width="32px" height="32px"></a></li>
+                <li style="padding: 15px;"><a href="https://www.linkedin.com/in/gabriel-souza-%F0%9F%8F%B3%EF%B8%8F%E2%80%8D%F0%9F%8C%88-48b741139/"> 
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733561.png" alt="LinkedIn" width="32px" height="32px"></a>
+                </li>
+                
+            </ul>
+            
+        </nav>
+        
+       
+    <p>&copy; 2025 Gabriel Souza. Todos os direitos reservados.</p>
+   
+</div>
+</footer>

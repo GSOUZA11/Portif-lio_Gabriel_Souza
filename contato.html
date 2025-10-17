@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apresentação pessoal - Gabriel Souza</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+  
+</head>
+<body>
+    <!--Navegação das paginas-->
+    <header>
+        <nav>
+        <a href="./index.html" class="logo"> Gabriel Souza</a>
+        <button class="menu-toggle" onclick="togglemenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+        </button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="./index.html">Início</a></li>
+            <li><a href="./apresentação.html">Apresentação</a></li>
+            <li><a href="./projetos.html">Projetos</a></li>
+            <li><a href="./contato.html">Contato</a></li>
+            <li><a href="./privacidade.html">Privacidade</a></li>
+        </ul>
+        </nav>
+    </header>
+
+
+    <main>
+        <!-- Header da página -->
+        <section class="page-header">
+            <div class="container">
+                <h1>Vamos Conversar?</h1>
+                <p>Entre em contato comigo para discutir projetos, oportunidades ou apenas trocar uma ideia sobre tecnologia</p>
+            </div>
+        </section>
+
+        <!-- Seção de contato principal -->
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-grid">
+                    <!-- Informações de contato -->
+                    <div class="contact-info">
+                        <h2>Informações de Contato</h2>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">📧</div>
+                            <div class="contact-details">
+                                <h4>E-mail</h4>
+                                <p>Para projetos e oportunidades profissionais</p>
+                                <a href="mailto:joao.silva@email.com">bielaraujo878@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">📱</div>
+                            <div class="contact-details">
+                                <h4>Telefone / WhatsApp</h4>
+                                <p>Disponível das 9h às 18h</p>
+                                <a href="tel:+5511999999999">+55 (11) 94661-0451</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <div class="contact-details">
+                                <h4>Localização</h4>
+                                <p>São Paulo, SP - Brasil</p>
+                                <p>Disponível para trabalho remoto</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">💼</div>
+                            <div class="contact-details">
+                                <h4>LinkedIn</h4>
+                                <p>Vamos nos conectar profissionalmente</p>
+                                <a href="https://www.linkedin.com/in/gabriel-souza-%F0%9F%8F%B3%EF%B8%8F%E2%80%8D%F0%9F%8C%88-48b741139/" target="_blank">linkedin.com/in/gabrielsouza</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Formulário de contato -->
+                    <div class="contact-form">
+                        <h2>Envie uma Mensagem</h2>
+                        <form action="#" method="post" onsubmit="handleSubmit(event)">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="nome">Nome *</label>
+                                    <input type="text" id="nome" name="nome" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">E-mail *</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="assunto">Assunto *</label>
+                                <input type="text" id="assunto" name="assunto" placeholder="Ex: Proposta de projeto, Oportunidade de trabalho..." required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="telefone">Telefone (opcional)</label>
+                                <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="mensagem">Mensagem *</label>
+                                <textarea id="mensagem" name="mensagem" placeholder="Conte-me mais sobre seu projeto ou oportunidade..." required></textarea>
+                            </div>
+
+                            <button type="submit" class="submit-btn">
+                                Enviar Mensagem
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de disponibilidade -->
+        <section class="availability-section">
+            <div class="container">
+                <div class="availability-card">
+                    <h2>Status de Disponibilidade</h2>
+                    <div class="status-indicator">
+                        <span class="status-dot"></span>
+                        Disponível para novos projetos
+                    </div>
+                    <p style="color: var(--cor-texto-claro); line-height: 1.7;">
+                        Atualmente estou disponível para projetos freelance e oportunidades de trabalho em tempo integral. 
+                        Respondo todas as mensagens em até 24 horas e ofereço uma consulta inicial gratuita 
+                        para discutir seu projeto.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+
+    <script>
+        // Função para toggle do menu mobile
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+
+        // Função para lidar com o envio do formulário
+        function handleSubmit(event) {
+            event.preventDefault();
+            
+            // Simular envio do formulário
+            const submitBtn = event.target.querySelector('.submit-btn');
+            const originalText = submitBtn.textContent;
+            
+            submitBtn.textContent = 'Enviando...';
+            submitBtn.disabled = true;
+            
+            setTimeout(() => {
+                submitBtn.textContent = 'Mensagem Enviada! ✓';
+                submitBtn.style.backgroundColor = '#27ae60';
+                
+                setTimeout(() => {
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                    submitBtn.style.backgroundColor = '';
+                    event.target.reset();
+                }, 2000);
+            }, 1500);
+        }
+
+        // Validação em tempo real dos campos
+        document.querySelectorAll('input[required], textarea[required]').forEach(field => {
+            field.addEventListener('blur', function() {
+                if (this.value.trim() === '') {
+                    this.style.borderColor = '#e74c3c';
+                } else {
+                    this.style.borderColor = '#27ae60';
+                }
+            });
+
+            field.addEventListener('input', function() {
+                if (this.value.trim() !== '') {
+                    this.style.borderColor = '#27ae60';
+                }
+            });
+        });
+
+        // Validação específica para email
+        document.getElementById('email').addEventListener('blur', function() {
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (this.value && !emailPattern.test(this.value)) {
+                this.style.borderColor = '#e74c3c';
+            } else if (this.value) {
+                this.style.borderColor = '#27ae60';
+            }
+        });
+
+        // Fecha o menu mobile ao clicar em um link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('navLinks').classList.remove('active');
+            });
+        });
+
+        // Fecha o menu mobile ao redimensionar a tela
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+                document.getElementById('navLinks').classList.remove('active');
+            }
+        });
+    </script>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <nav>
+            <ul style="text-align: center; list-style: none; display: flex; justify-content:space-between; padding: 0; margin: 0;">
+                <li style="padding: 15px;"><a href="https://www.facebook.com/11980994351biel/">
+                     <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" width="32px" height="32px" ></a></li>
+                <li style="padding: 15px;"><a href="https://github.com/GSOUZA11"> 
+                    <img src="img/github.png" alt="github" width="32px" height="32px"></a></li>
+                <li style="padding: 15px;"><a href="https://www.instagram.com"> 
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram" width="32px" height="32px"></a></li>
+                <li style="padding: 15px;"><a href="https://www.linkedin.com/in/gabriel-souza-%F0%9F%8F%B3%EF%B8%8F%E2%80%8D%F0%9F%8C%88-48b741139/"> 
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733561.png" alt="LinkedIn" width="32px" height="32px"></a>
+                </li>
+                
+            </ul>
+            
+        </nav>
+        
+       
+    <p>&copy; 2025 Gabriel Souza. Todos os direitos reservados.</p>
+   
+</div>
+</footer>
