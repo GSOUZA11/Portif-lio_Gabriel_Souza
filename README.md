@@ -25,3 +25,7 @@ aplicando conceitos de design minimalista e desenvolvimento responsivo.
 
 ## 👨‍💻 Desenvolvedor
 Gabriel Souza - Projeto Integrador UC1/UC2
+
+📸 Preview Você pode hospedar o projeto no GitHub Pages para visualização online. Exemplo: https://portifolio-gabriel-souza.netlify.app/
+
+📬 Contato Para dúvidas ou sugestões, entre em contato pelo WhatsApp ou envie um e-mail para: bielaraujo878@gmail.com
